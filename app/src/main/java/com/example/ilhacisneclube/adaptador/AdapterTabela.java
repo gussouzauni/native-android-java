@@ -41,14 +41,12 @@ public class AdapterTabela extends RecyclerView.Adapter<AdapterTabela.ViewHolder
 
     public class ViewHolderTabela extends RecyclerView.ViewHolder {
 
-        private TextView nomeCampeonato, tipoTabela, acessarTabela;
+        private TextView nomeCampeonato;
 
         public ViewHolderTabela(@NonNull View itemView) {
             super(itemView);
 
-            tipoTabela = itemView.findViewById(R.id.text_view_tipo_tabela_adapter);
             nomeCampeonato = itemView.findViewById(R.id.text_view_nome_campeonato_adapter_tabela);
-            acessarTabela = itemView.findViewById(R.id.text_view_acessar_tabela_adapter);
 
         }
     }

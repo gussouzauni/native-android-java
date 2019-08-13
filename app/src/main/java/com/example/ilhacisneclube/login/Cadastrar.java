@@ -37,8 +37,6 @@ public class Cadastrar extends AppCompatActivity {
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
 
-    ExplosionField explosionField;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +45,6 @@ public class Cadastrar extends AppCompatActivity {
         databaseReference = firebaseDatabase.getInstance().getReference("User");
         firebaseAuth = FirebaseAuth.getInstance();
         inicializarComponentes();
-        explosionField = ExplosionField.attach2Window(this);
         cadastrarUsuario();
         botaoVoltar();
     }
@@ -120,7 +117,6 @@ public class Cadastrar extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     Alert("Cadastro efetuado com sucesso");
-                                    explosionField.explode(btnCadastrar);
                                     final Runnable mRun = new Runnable () {
                                         @Override
                                         public void run() {

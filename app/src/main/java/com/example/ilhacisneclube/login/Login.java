@@ -33,8 +33,6 @@ public class Login extends AppCompatActivity {
     private EditText userSenha;
 
     FirebaseAuth firebaseAuth;
-    ExplosionField explosionField;
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,7 +40,6 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.login_activity);
         firebaseAuth = FirebaseAuth.getInstance();
         inicializarComponentes();
-        explosionField = ExplosionField.attach2Window(this);
         botaoCadastrar();
         resetarSenha();
         verificarLogin();
@@ -99,6 +96,7 @@ public class Login extends AppCompatActivity {
                             }
 
                         } else { //Se não estiver logado
+                            startActivity(new Intent(Login.this, MainActivity.class));
                             Log.w("", "signInWithCredential:failure", task.getException());
                             alert("Login incorreto");
                         }

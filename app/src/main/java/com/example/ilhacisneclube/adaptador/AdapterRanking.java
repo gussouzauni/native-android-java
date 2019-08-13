@@ -34,12 +34,14 @@ public class AdapterRanking extends RecyclerView.Adapter<AdapterRanking.ViewHold
         viewHolderRanking.nomeCampeonato.setText(ranking.getNomeCampeonato());
         viewHolderRanking.quantidadeTimes.setText(ranking.getQuantidadeTimes());
         viewHolderRanking.modalidadeCampeonato.setText(ranking.getModalidadeCampeonato());
+        /*Retirei o acessarRanking
         viewHolderRanking.acessarRanking.setOnClickListener(new View.OnClickListener() { //Insere o click no botão exibir;
             @Override
             public void onClick(View v) {
 
             }
         });
+        */
     }
 
     @Override
@@ -50,12 +52,11 @@ public class AdapterRanking extends RecyclerView.Adapter<AdapterRanking.ViewHold
     public class ViewHolderRanking extends RecyclerView.ViewHolder {
 
 
-        private TextView acessarRanking, quantidadeTimes, nomeCampeonato, modalidadeCampeonato, timeCampeao, exibirLider, exibirTimes;
+        private TextView quantidadeTimes, nomeCampeonato, modalidadeCampeonato, timeCampeao, exibirLider, exibirTimes;
 
         public ViewHolderRanking(@NonNull View itemView) {
             super(itemView);
 
-            acessarRanking = itemView.findViewById(R.id.text_view_acessar_ranking);
             quantidadeTimes = itemView.findViewById(R.id.text_view_quantidade_times_adapter_ranking);
             nomeCampeonato = itemView.findViewById(R.id.text_view_nome_campeonato_adapter_ranking);
             modalidadeCampeonato = itemView.findViewById(R.id.text_view_modalidade_campeonato_adapter_ranking);
