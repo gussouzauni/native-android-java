@@ -1,2 +1,2 @@
-# IlhaCisneClube
-Protótipo desenvolvido em Android para o ilha cisne clube
+# Meu primeiro protótipo
+Desenvolvido em Android
